@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+
+{% block body %}
+    <head>
+      <title>Credit Card Information</title>
+    </head>
+    <h1 align="center">Credit Card Information</h1>
+    <body>
+        <form action= "/check" method="post">
+            <fieldset>
+                <div class="form-group"> Account Number:
+                    <input autocomplete="off" autofocus class="form-control" name="Account" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength = "16" type="integers"/>
+                </div>
+
+                 Card Type:
+                <select name="cardType">
+                    <option value=""></option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="American">American Express</option>
+                    <option value="Discover">Discover</option>
+                </select>
+                <div class="form-group">
+                    <button class="btn btn-default" type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+{% endblock %}
